@@ -23,10 +23,8 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 ## Architecture
 
 - Linux-based VM (xubuntu)
-- Docker-based applications
+- Docker applications
 - Internal networking between services
-
-(Add diagram in /images/architecture.png)
 
 ---
 
@@ -38,6 +36,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 - Services:
   - Docker
   - LmStudio
+  - Tailscale
   - Anythingllm (docker image)
   - API services
     
@@ -45,12 +44,28 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ## Installation Summary
 
-1. Installed Proxmox VE on host machine
-2. Created base Linux VM templates
-3. Deployed AI service VM using template
-4. Installed Docker and dependencies
-5. Configured networking between VMs
-6. Deployed AI services via Docker Compose
+- Created the VM
+  Installed xubuntu (desktop) iso and loaded it into proxmox. Set and assigned ram, cpu cores, and storage.
+
+- installed LmStudio
+   1. went to LmStudio's website and downloaded the linux appimage on the vm.
+   2. created a folder for LmStudio (lmstudio) in home. Moved appimage to new folder.
+   3. give appimage file permissions. cd into the folder and use chmod (chmod u+x LM-Studio-0.4.2.2-64x.AppImage)
+
+      IMAGE
+
+    4. execute and extract appimage (./LM-Studio-0.4.2.2-64x.AppImage --appimage-extract
+    5. enter the new folder squashfs-root
+    6. set permissions in squashfs using (sudo chown root:root chrome-sandbox) and (sudo chmod 4755 chrome-sandbox)
+    7. run the program (./lm-studio)
+
+  Easy startup
+  instead of having to navigate to squashfs-root each time to run lmstudio, I created an alias (alias lmstudiorun='cd lmstudio/squashfs-root && ./lm-studio') to navigate to squashfs and run the program whne i type "lmstudiorun" in the terminal
+  
+4. Deployed AI service VM using template
+5. Installed Docker and dependencies
+6. Configured networking between VMs
+7. Deployed AI services via Docker Compose
 
 ---
 
