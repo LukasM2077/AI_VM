@@ -18,7 +18,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 - Explore containerized AI workloads
 - Set up tailnet for use outside of home network
 
----
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20182925.png?raw=true)
 
 ## Architecture
 
