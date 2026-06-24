@@ -30,7 +30,6 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ## Virtual Machine
 
-### AI Service VM
 - OS: xUbuntu Desktop
 - Role: AI tools / container runtime
 - Services:
