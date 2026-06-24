@@ -51,23 +51,25 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
    2. created a folder for LmStudio (lmstudio) in home. Moved appimage to new folder.
    3. give appimage file permissions. cd into the folder and use chmod (chmod u+x LM-Studio-0.4.2.2-64x.AppImage)
 
-      IMAGE
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20185809.png?raw=true)
 
-    4. execute and extract appimage (./LM-Studio-0.4.2.2-64x.AppImage --appimage-extract
+   4. execute and extract appimage (./LM-Studio-0.4.2.2-64x.AppImage --appimage-extract
     5. enter the new folder squashfs-root
     6. set permissions in squashfs using (sudo chown root:root chrome-sandbox) and (sudo chmod 4755 chrome-sandbox)
     7. run the program (./lm-studio)
 
-  Easy startup
-  instead of having to navigate to squashfs-root each time to run lmstudio, I created an alias (alias lmstudiorun='cd lmstudio/squashfs-root && ./lm-studio') to navigate to squashfs and run the program whne i type "lmstudiorun" in the terminal
+   8. Easy startup
+instead of having to navigate to squashfs-root each time to run lmstudio, I created an alias (alias lmstudiorun='cd lmstudio/squashfs-root && ./lm-studio') to navigate to squashfs and run the program whne i type "lmstudiorun" in the terminal
+
+---
   
-4. Deployed AI service VM using template
-5. Installed Docker and dependencies
-6. Configured networking between VMs
-7. Deployed AI services via Docker Compose
+- Installed Docker
+    Updated (sudo apt update && sudo apt upgrade -y) and Installed docker from their website and follow the instructions ( sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin)
 
 ---
 
+- Installed anythingllm docker image
+   used the pull command (docker pull mintplexlabs/anythingllm:latest) listed on their website
 ## Networking
 
 - Static IP assignment for VMs
@@ -76,6 +78,12 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ---
 
+## services
+
+- Docker https://docs.docker.com/engine/install/ubuntu/
+- anythingllm https://docs.anythingllm.com/installation-docker/available-images
+- lmstudio https://lmstudio.ai/download
+  
 ## Skills Demonstrated
 
 - Virtualization (Proxmox VE)
