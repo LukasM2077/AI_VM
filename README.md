@@ -98,7 +98,7 @@ mintplexlabs/anythingllm  )
 - set up anythingllm
   added docs, set up the model, and customized the app.
 
-
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200125.png?raw=true)
   
 ---
 
