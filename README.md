@@ -50,7 +50,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
   use VirtIO SCSI single and add the pci device
 
-  IMAGE
+  ![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200907.png?raw=true)
 
 - Created the VM
   Installed xubuntu (desktop) iso and loaded it into proxmox. Set and assigned ram, cpu cores, and storage.
