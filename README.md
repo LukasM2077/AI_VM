@@ -78,7 +78,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
     7. run the program (./lm-studio)
 
    8. Easy startup
-instead of having to navigate to squashfs-root each time to run lmstudio, I created an alias (alias lmstudiorun='cd lmstudio/squashfs-root && ./lm-studio') to navigate to squashfs and run the program whne i type "lmstudiorun" in the terminal
+instead of having to navigate to squashfs-root each time to run lmstudio, I created an alias (alias lmstudiorun='cd lmstudio/squashfs-root && ./lm-studio') to navigate to squashfs and run the program when i type "lmstudiorun" in the terminal
 
 ---
   
@@ -94,7 +94,7 @@ instead of having to navigate to squashfs-root each time to run lmstudio, I crea
   used (curl -fsSL https://tailscale.com/install.sh | sh) to install.
 
 -used SOCAT for Tailscale
-  used socat command (socat TCP-LISTEN:3001,fork,reuseaddr TCP:127.0.0.1:3001) so tailscale can see it, and i can acess the image wile on my tailnet and outside of my home network.
+  used socat command (socat TCP-LISTEN:3001,fork,reuseaddr TCP:127.0.0.1:3001) so tailscale can see it, and i can access the image wile on my tailnet and outside of my home network.
 
 - Set up anythingllm image
   using the website's command:
