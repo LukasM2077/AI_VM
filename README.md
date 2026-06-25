@@ -43,6 +43,15 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ## Installation Summary
 
+- set up pcie passthrough
+  add vfio in cmdline with nano in node 2
+
+  IMAGE
+
+  use VirtIO SCSI single and add the pci device
+
+  IMAGE
+
 - Created the VM
   Installed xubuntu (desktop) iso and loaded it into proxmox. Set and assigned ram, cpu cores, and storage.
 
@@ -104,7 +113,7 @@ mintplexlabs/anythingllm  )
 
 ## Demonstration Of AI
 
-IMAGE
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20194717.png?raw=true)
   
 ## Networking
 
