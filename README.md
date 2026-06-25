@@ -46,7 +46,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 - set up pcie passthrough
   add vfio in cmdline with nano in node 2
 
-  IMAGE
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200802.png?raw=true)
 
   use VirtIO SCSI single and add the pci device
 
