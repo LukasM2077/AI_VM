@@ -48,9 +48,19 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200802.png?raw=true)
 
+---
+
   use VirtIO SCSI single and add the pci device
 
+---
+
   ![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200907.png?raw=true)
+
+---
+
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200931.png?raw=true)
+
+---
 
 - Created the VM
   Installed xubuntu (desktop) iso and loaded it into proxmox. Set and assigned ram, cpu cores, and storage.
@@ -140,12 +150,3 @@ mintplexlabs/anythingllm  )
 - Infrastructure documentation
 - Basic AI service deployment
 - PCIE passthrough and other tools
-  
----
-
-## Future Improvements
-
-- GPU passthrough for AI acceleration
-- Kubernetes cluster expansion
-- More isolated service VMs
-- Automated VM provisioning scripts
