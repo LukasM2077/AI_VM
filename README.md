@@ -66,15 +66,52 @@ instead of having to navigate to squashfs-root each time to run lmstudio, I crea
 - Installed Docker
     Updated (sudo apt update && sudo apt upgrade -y) and Installed docker from their website and follow the instructions ( sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin)
 
----
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20193211.png?raw=true)
 
 - Installed anythingllm docker image
    used the pull command (docker pull mintplexlabs/anythingllm:latest) listed on their website
+
+-installed Tailscale
+  used (curl -fsSL https://tailscale.com/install.sh | sh) to install.
+
+-used SOCAT for Tailscale
+  used socat command (socat TCP-LISTEN:3001,fork,reuseaddr TCP:127.0.0.1:3001) so tailscale can see it, and i can acess the image wile on my tailnet and outside of my home network.
+
+- Set up anythingllm image
+  using the website's command:
+
+---
+
+( export STORAGE_LOCATION=$HOME/anythingllm && \
+mkdir -p $STORAGE_LOCATION && \
+touch "$STORAGE_LOCATION/.env" && \
+docker run -d -p 3001:3001 \
+--cap-add SYS_ADMIN \
+--name anythingllm \
+-v ${STORAGE_LOCATION}:/app/server/storage \
+-v ${STORAGE_LOCATION}/.env:/app/server/.env \
+-e STORAGE_DIR="/app/server/storage" \
+mintplexlabs/anythingllm  )
+
+---
+
+- set up anythingllm
+  added docs, set up the model, and customized the app.
+
+
+  
+---
+
+## Demonstration Of AI
+
+IMAGE
+  
 ## Networking
 
-- Static IP assignment for VMs
+- Static IP assignment for VM
 - Bridge networking via Proxmox (vmbr0)
 - Tailscale
+- socat
 
 ---
 
@@ -83,6 +120,7 @@ instead of having to navigate to squashfs-root each time to run lmstudio, I crea
 - Docker https://docs.docker.com/engine/install/ubuntu/
 - anythingllm https://docs.anythingllm.com/installation-docker/available-images
 - lmstudio https://lmstudio.ai/download
+- Tailscale https://tailscale.com/download/linux
   
 ## Skills Demonstrated
 
