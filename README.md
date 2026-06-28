@@ -140,6 +140,18 @@ mintplexlabs/anythingllm  )
 
 ---
 
+## Issues and Solutions
+
+- LmStudio will not load models
+  
+Solution: CPU must be set to "host" in the VM's hardware settings instead of the default. models are now able to load.
+
+- AnythingLLM will not stay running and stops
+  
+Solution: LmStudio could not load models, so no model was selected causing the stop in docker.
+
+---
+
 ## services
 
 - Docker https://docs.docker.com/engine/install/ubuntu/
