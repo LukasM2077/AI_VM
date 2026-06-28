@@ -43,14 +43,19 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ## Installation Summary
 
+- created the vm on node 2
+  
+  set ram size, cpu cores, iso, storage and continue.
+   Note: cpu must be set to "Host" in the vm hardware settings or else lmstudio will not run properly.
+  
 - set up pcie passthrough
-  add vfio in cmdline with nano in node 2
+  added vfio in cmdline with nano in node 2
 
 ![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200802.png?raw=true)
 
 ---
 
-  use VirtIO SCSI single and add the pci device
+  used VirtIO SCSI single and add the pci device
 
 ---
 
@@ -61,9 +66,6 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 ![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200931.png?raw=true)
 
 ---
-
-- Created the VM
-  Installed xubuntu (desktop) iso and loaded it into proxmox. Set and assigned ram, cpu cores, and storage.
 
 - installed LmStudio
    1. went to LmStudio's website and downloaded the linux appimage on the vm.
