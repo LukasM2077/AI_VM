@@ -46,7 +46,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 - created the vm on node 2
   
   set ram size, cpu cores, iso, storage and continue.
-   Note: cpu must be set to "Host" in the vm hardware settings or else lmstudio will not run properly.
+   Note: cpu must be set to "Host" and not the default setting in the vm hardware settings or else lmstudio will not run properly.
   
 - set up pcie passthrough
   added vfio in cmdline with nano in node 2
@@ -63,7 +63,7 @@ The goal is to simulate real-world infrastructure for AI workloads and self-host
 
 ---
 
-![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20200931.png?raw=true)
+![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/screenshot2026.png?raw=true)
 
 ---
 
@@ -90,15 +90,19 @@ instead of having to navigate to squashfs-root each time to run lmstudio, I crea
 ![image_api](https://github.com/LukasM2077/AI_VM/blob/main/images/Screenshot%202026-06-24%20193211.png?raw=true)
 
 - Installed anythingllm docker image
+  
    used the pull command (docker pull mintplexlabs/anythingllm:latest) listed on their website
 
 -installed Tailscale
+
   used (curl -fsSL https://tailscale.com/install.sh | sh) to install.
 
 -used SOCAT for Tailscale
+
   used socat command (socat TCP-LISTEN:3001,fork,reuseaddr TCP:127.0.0.1:3001) so tailscale can see it, and i can access the image wile on my tailnet and outside of my home network.
 
 - Set up anythingllm image
+  
   using the website's command:
 
 ---
